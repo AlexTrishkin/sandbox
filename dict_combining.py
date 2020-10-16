@@ -18,8 +18,8 @@ salad = {'огурцы, кг': 1,
 def print_shopping_list(dish1, dish2):
     dishKeys1 = set(dish1.keys())  # Конвентируем ключи словаря 1 в множество
     dishKeys2 = set(dish2.keys())  # Конвентируем ключи словаря 2 в множество
-    regs_list = dishKeys1.union(dishKeys2)  # добавляем в множество 1 , уникальные значения из множества 2
-    for key in regs_list:  # Для ключа в множестве значений
+    dish3 = dishKeys1.union(dishKeys2)  # добавляем в множество 1 , уникальные значения из множества 2
+    for key in dish3:  # Для ключа в множестве значений
         if key in dish1 and key in dish2:  # Если ключ находится и в 1, и во 2 словаре
             val_sum = dish1[key] + dish2[key]   # Складываем значения данного ключа из обоих словарей
             print('{}: {}'.format(key, str(val_sum)))  # Выводим на экран полученное значение ( Прим.'помидоры, кг: 2 ')
